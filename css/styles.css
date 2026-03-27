@@ -640,11 +640,10 @@ footer {
   .sec-head { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  /* Top bar — just show the CTA link centered */
-  .top-bar { padding: 0 40px 0 16px; justify-content: center; gap: 0; }
+  /* Top bar — just show "Join the waitlist →" centered */
+  .top-bar { padding: 0 40px 0 16px; justify-content: center; }
   .top-bar-pill { display: none; }
-  .top-bar > span { display: none; }
-  .top-bar-link { font-size: 13px; }
+  .top-bar-text { display: none; }
 
   /* Nav */
   nav { padding: 0 20px; }
