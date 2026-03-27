@@ -640,8 +640,15 @@ footer {
   .sec-head { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
+  /* Top bar — show only the CTA link on mobile */
+  .top-bar { gap: 8px; padding: 0 40px 0 12px; justify-content: center; }
+  .top-bar > span:first-of-type { display: none; } /* hide pill */
+  .top-bar > span:nth-of-type(2) { display: none; } /* hide long text */
+
+  /* Nav */
   nav { padding: 0 20px; }
   .nav-links { display: none; }
+
   h1 { letter-spacing: -1.5px; }
   .cta-card { padding: 44px 24px; }
   footer { padding: 28px 20px; }
