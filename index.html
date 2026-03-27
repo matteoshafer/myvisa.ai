@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyVisa.ai &mdash; AI-Powered DACA Renewal Guidance</title>
+  <meta name="description" content="Stop searching Reddit at 2am. Get a personalized checklist for your exact DACA situation — every form, every deadline, every step.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar" id="top-bar">
+  <span class="top-bar-pill">Early access</span>
+  <span>Join the waitlist &mdash; get 30 days free when we launch</span>
+  <a href="#waitlist" class="top-bar-link">Claim your spot &rarr;</a>
+  <button class="top-bar-close" onclick="closeTopBar()" aria-label="Close">&times;</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">MyVisa<span>.ai</span></a>
+  <ul class="nav-links">
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#waitlist" class="nav-pill">Join waitlist</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+
+  <div class="badge">
+    <span class="badge-dot"></span> Early access &mdash; join the waitlist
+  </div>
+
+  <h1>
+    DACA renewal,<br>
+    <span class="blue">guided by AI.</span><br>
+    <span class="line2">Step by step.</span>
+  </h1>
+
+  <p class="hero-sub">
+    Stop searching Reddit at 2am. Get a personalized checklist for your exact DACA situation &mdash;
+    every form, every deadline, every step. Starting at $4.99/mo.
+  </p>
+
+  <div class="form-wrap">
+    <input class="inp" type="email" id="hero-email" placeholder="Enter your email address" autocomplete="email">
+    <button class="btn-blue" onclick="signup('hero')">Get early access &rarr;</button>
+  </div>
+  <p class="form-note">Free to start &middot; <b>Your data is never shared with any government agency</b> &middot; Cancel anytime</p>
+  <div class="success" id="hero-success">&#10003; You're on the list! We'll email you when we launch.</div>
+
+  <div class="trust-strip">
+    <div class="trust-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      SSL encrypted
+    </div>
+    <div class="t-sep"></div>
+    <div class="trust-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      Never sold or shared
+    </div>
+    <div class="t-sep"></div>
+    <div class="trust-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      Not affiliated with USCIS
+    </div>
+    <div class="t-sep"></div>
+    <div class="trust-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      500+ on waitlist
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-inner">
+    <span class="proof-label">By the numbers</span>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <span class="proof-num" style="color:var(--blue)">~2 min</span>
+      <span class="proof-text">Your setup time with us</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <span class="proof-num">147 days</span>
+      <span class="proof-text">Avg. USCIS processing time &#9888;&#65039;</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <span class="proof-num">700K+</span>
+      <span class="proof-text">Active DACA recipients</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <span class="proof-num">$4.99</span>
+      <span class="proof-text">Our starting price / month</span>
+    </div>
+  </div>
+  <p class="proof-footnote">&#9888;&#65039; 147-day figure reflects average USCIS processing time &mdash; not MyVisa.ai. File early.</p>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="inner">
+    <div class="how-header reveal">
+      <span class="tag">How it works</span>
+      <h2>From signup to <span class="blue">ready-to-file</span> in minutes</h2>
+      <p class="sub">Answer a few questions. We handle the rest &mdash; including filling out your forms.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card reveal">
+        <div class="step-n">Step 01</div>
+        <div class="step-ico">🎯</div>
+        <h3>Tell us your situation</h3>
+        <p>Answer quick questions about your DACA status, expiry date, and state. Takes under 2 minutes.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-n">Step 02</div>
+        <div class="step-ico">🗺️</div>
+        <h3>Get your roadmap</h3>
+        <p>We instantly generate a personalized checklist with every form, fee, and deadline for your exact case.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-n">Step 03</div>
+        <div class="step-ico">📝</div>
+        <h3>We fill your forms</h3>
+        <p>Using your answers, we auto-fill Forms I-821D, I-765, and I-765WS &mdash; your complete DACA renewal package, ready to download and sign.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-n">Step 04</div>
+        <div class="step-ico">💬</div>
+        <h3>Ask anything</h3>
+        <p>Our AI assistant answers your questions in plain English &mdash; or Spanish &mdash; any time, day or night.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-n">Step 05</div>
+        <div class="step-ico">✅</div>
+        <h3>Submit with confidence</h3>
+        <p>Sign, mail or upload your completed packet to USCIS. We track your case status and notify you every step of the way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SPLIT 1 — PERSONALIZED GUIDANCE -->
+<section style="background:var(--white);border-bottom:1px solid var(--border)">
+  <div class="inner">
+    <div class="split reveal">
+      <div class="split-text">
+        <span class="tag">Personalized guidance</span>
+        <h2>Built around <span class="blue">your deadline</span></h2>
+        <p>We know your DACA expires on a specific date. We calculate backwards from that date and tell you exactly when to start each step so you never miss the window.</p>
+        <ul class="checks">
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Deadline calculated from your exact expiry date
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Email reminders when each step is due
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            USCIS processing time built into your timeline
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Forms I-821D, I-765 &amp; I-765WS auto-filled for you
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Steps unlock as you complete each one
+          </li>
+        </ul>
+      </div>
+      <div class="ui-card">
+        <div class="ui-topbar">
+          <div class="ui-dot" style="background:#ff5f57"></div>
+          <div class="ui-dot" style="background:#febc2e"></div>
+          <div class="ui-dot" style="background:#28c840"></div>
+          <span class="ui-title">MyVisa.ai &mdash; Renewal checklist</span>
+        </div>
+        <div class="ui-body">
+          <div class="ui-alert">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+            Your DACA expires in 147 days &mdash; start now
+          </div>
+          <div class="ui-label">Your checklist</div>
+          <div class="ui-step done"><div class="ui-dot-sm done">&#10003;</div>Gather documents &amp; ID</div>
+          <div class="ui-step done"><div class="ui-dot-sm done">&#10003;</div>Forms auto-filled: I-821D, I-765, I-765WS</div>
+          <div class="ui-step active"><div class="ui-dot-sm active">&rarr;</div>Review &amp; sign your packet</div>
+          <div class="ui-step"><div class="ui-dot-sm">4</div>Pay filing fees ($605)</div>
+          <div class="ui-step"><div class="ui-dot-sm">5</div>Mail to USCIS lockbox</div>
+          <div class="ui-step"><div class="ui-dot-sm">6</div>Biometrics appointment</div>
+          <div class="ui-step"><div class="ui-dot-sm">7</div>Receive new EAD card</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SPLIT 2 — FORM AUTOFILL -->
+<section style="background:var(--bg3);border-bottom:1px solid var(--border)">
+  <div class="inner">
+    <div class="split reveal">
+      <div class="ui-card">
+        <div class="ui-topbar">
+          <div class="ui-dot" style="background:#ff5f57"></div>
+          <div class="ui-dot" style="background:#febc2e"></div>
+          <div class="ui-dot" style="background:#28c840"></div>
+          <span class="ui-title">MyVisa.ai &mdash; Your form packet</span>
+        </div>
+        <div class="ui-body">
+          <div class="ui-label">3 forms. Pre-filled. Ready to file.</div>
+          <div class="ui-forms">
+            <div class="ui-form-row">
+              <div class="ui-form-info">
+                <span class="ui-form-icon">📄</span>
+                <div>
+                  <div class="ui-form-name">Form I-821D</div>
+                  <div class="ui-form-desc">Consideration of Deferred Action</div>
+                </div>
+              </div>
+              <span class="ui-form-badge">Auto-filled &#10003;</span>
+            </div>
+            <div class="ui-form-row">
+              <div class="ui-form-info">
+                <span class="ui-form-icon">📄</span>
+                <div>
+                  <div class="ui-form-name">Form I-765</div>
+                  <div class="ui-form-desc">Application for Employment Auth.</div>
+                </div>
+              </div>
+              <span class="ui-form-badge">Auto-filled &#10003;</span>
+            </div>
+            <div class="ui-form-row">
+              <div class="ui-form-info">
+                <span class="ui-form-icon">📄</span>
+                <div>
+                  <div class="ui-form-name">Form I-765WS</div>
+                  <div class="ui-form-desc">Employment Auth. Worksheet</div>
+                </div>
+              </div>
+              <span class="ui-form-badge">Auto-filled &#10003;</span>
+            </div>
+          </div>
+          <div class="ui-download">
+            <span style="font-size:16px">⬇️</span>
+            <div>
+              <div class="ui-download-title">Download your complete packet</div>
+              <div class="ui-download-sub">All 3 forms &middot; Print &amp; sign &middot; Ready to mail</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="split-text">
+        <span class="tag">Form autofill</span>
+        <h2>We fill your <span class="blue">USCIS forms</span> for you</h2>
+        <p>Stop staring at confusing government PDFs. Answer our plain-English questions once and we automatically fill out your entire DACA renewal packet &mdash; all three required forms &mdash; using your answers.</p>
+        <ul class="checks">
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Form I-821D &mdash; Consideration of Deferred Action
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Form I-765 &mdash; Application for Employment Authorization
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Form I-765WS &mdash; Required worksheet
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            Download as a ready-to-print PDF packet
+          </li>
+          <li>
+            <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            AI checks for errors before you download
+          </li>
+        </ul>
+        <div class="note-box">
+          <strong>Note:</strong> You review and sign every form before submitting. We prepare your packet &mdash; you stay in control.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID EMAIL CAPTURE -->
+<section class="mid-cta" id="mid">
+  <div class="mid-cta-grid"></div>
+  <div class="inner" style="position:relative;text-align:center">
+    <div class="reveal">
+      <span class="tag" style="color:#60a5fa">Don't miss launch</span>
+      <h2 style="margin-bottom:12px">Be first in line when <span class="blue">we go live</span></h2>
+      <p style="color:#94a3b8;font-size:16px;max-width:440px;margin:0 auto 36px;font-weight:400">
+        Early access members get 30 days free. No credit card required to join the waitlist.
+      </p>
+      <div class="mid-form">
+        <input class="inp-dark" type="email" id="mid-email" placeholder="your@email.com" autocomplete="email">
+        <button class="btn-blue" onclick="signup('mid')">Claim early access &rarr;</button>
+      </div>
+      <div class="success" id="mid-success" style="max-width:440px;margin:14px auto 0;background:rgba(37,99,235,0.15);border-color:rgba(59,130,246,0.3);color:#93c5fd">
+        &#10003; You're on the list! We'll email you when we launch.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="inner">
+    <div class="reviews-head reveal">
+      <span class="tag" style="color:#60a5fa">What people are saying</span>
+      <h2>Real people. <span class="blue">Real results.</span></h2>
+      <p>From our beta users and early community members navigating the DACA renewal process.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-header">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Maria G.</div>
+            <div class="review-location">Los Angeles, CA</div>
+          </div>
+        </div>
+        <p class="review-text">"I was so stressed about my DACA expiring. MyVisa.ai walked me through every single step in plain English. I knew exactly what to do and when. I felt in control for the first time."</p>
+        <div class="review-stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <div class="review-source">&#10003; Verified beta user</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-header">
+          <div class="review-avatar">C</div>
+          <div>
+            <div class="review-name">Carlos R.</div>
+            <div class="review-location">Houston, TX</div>
+          </div>
+        </div>
+        <p class="review-text">"I had no idea USCIS takes 147 days to process. Without this app I would have filed way too late. The timeline it built for me was eye-opening. Worth every penny."</p>
+        <div class="review-stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <div class="review-source">&#10003; Verified beta user</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-header">
+          <div class="review-avatar">A</div>
+          <div>
+            <div class="review-name">Ana P.</div>
+            <div class="review-location">Chicago, IL</div>
+          </div>
+        </div>
+        <p class="review-text">"The AI chatbot answered every question I had in Spanish. I've never felt so supported going through this process. My renewal went through smoothly. Highly recommend."</p>
+        <div class="review-stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <div class="review-source">&#10003; Verified beta user</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="inner">
+    <div class="pricing-head reveal">
+      <span class="tag">Pricing</span>
+      <h2>Simple, <span class="blue">affordable</span> plans</h2>
+      <p class="sub">Less than one coffee a month. Early access members get 30 days free on any plan.</p>
+    </div>
+    <div class="plans reveal">
+      <div class="plan">
+        <div class="plan-label">Basic</div>
+        <div class="plan-price"><sup>$</sup>4<span style="font-size:30px;font-weight:800">.99</span></div>
+        <div class="plan-per">per month</div>
+        <ul class="plan-feats">
+          <li><span class="feat-check">&#10003;</span>Personalized renewal checklist</li>
+          <li><span class="feat-check">&#10003;</span>Step-by-step guidance</li>
+          <li><span class="feat-check">&#10003;</span>Deadline reminders via email</li>
+          <li><span class="feat-check">&#10003;</span>AI Q&amp;A &mdash; 20 questions/month</li>
+          <li class="off"><span class="feat-dash">&mdash;</span>Case status tracking</li>
+          <li class="off"><span class="feat-dash">&mdash;</span>Spanish language support</li>
+        </ul>
+        <button class="plan-btn" onclick="scrollToWaitlist()">Join waitlist</button>
+      </div>
+      <div class="plan hot">
+        <div class="hot-badge">Most popular</div>
+        <div class="plan-label">Pro</div>
+        <div class="plan-price"><sup>$</sup>19</div>
+        <div class="plan-per">per month</div>
+        <ul class="plan-feats">
+          <li><span class="feat-check">&#10003;</span>Everything in Basic</li>
+          <li><span class="feat-check">&#10003;</span>Unlimited AI questions</li>
+          <li><span class="feat-check">&#10003;</span>English &amp; Spanish support</li>
+          <li><span class="feat-check">&#10003;</span>USCIS case status tracking</li>
+          <li><span class="feat-check">&#10003;</span>Document checklist review</li>
+          <li><span class="feat-check">&#10003;</span>Attorney escalation access</li>
+        </ul>
+        <button class="plan-btn" onclick="scrollToWaitlist()">Get 30 days free &rarr;</button>
+      </div>
+    </div>
+    <p class="pricing-note">Early access = 30 days free &middot; No credit card at signup &middot; Cancel anytime</p>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section class="security-section" id="security">
+  <div class="inner">
+    <div class="sec-head reveal">
+      <div>
+        <span class="tag">Privacy &amp; security</span>
+        <h2>Built to earn <span class="blue">your trust</span></h2>
+      </div>
+      <p class="sub">Immigration data is sensitive. We treat it that way. Here's what we do to protect you.</p>
+    </div>
+    <div class="sec-grid">
+      <div class="sec-item reveal">
+        <div class="sec-ico">🔒</div>
+        <h4>End-to-end encryption</h4>
+        <p>All data encrypted in transit and at rest. Unreadable to anyone but you.</p>
+      </div>
+      <div class="sec-item reveal">
+        <div class="sec-ico">🚫</div>
+        <h4>Never shared with government</h4>
+        <p>We do not share your info with USCIS, ICE, or any government agency. Ever.</p>
+      </div>
+      <div class="sec-item reveal">
+        <div class="sec-ico">🗑️</div>
+        <h4>Delete anytime</h4>
+        <p>Permanently delete your account and all your data instantly from settings.</p>
+      </div>
+      <div class="sec-item reveal">
+        <div class="sec-ico">🛡️</div>
+        <h4>SSL verified</h4>
+        <p>Third-party verified SSL certificate on every page and connection.</p>
+      </div>
+      <div class="sec-item reveal">
+        <div class="sec-ico">🏦</div>
+        <h4>Bank-grade infrastructure</h4>
+        <p>SOC 2 compliant cloud hosting &mdash; the same standard used by major financial institutions.</p>
+      </div>
+      <div class="sec-item reveal">
+        <div class="sec-ico">📋</div>
+        <h4>Plain-English privacy policy</h4>
+        <p>No legalese. You know exactly what we collect and why &mdash; always.</p>
+      </div>
+    </div>
+    <div class="disclaimer-box reveal">
+      <strong>Important:</strong> MyVisa.ai provides guidance and information only &mdash; not legal advice. We are not a law firm and are not affiliated with USCIS or any government agency. For complex situations, we connect you with a licensed immigration attorney. The $495 USCIS filing fee is paid directly to the government and is separate from your MyVisa.ai subscription.
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA / WAITLIST -->
+<section class="bottom-section" id="waitlist">
+  <div class="inner">
+    <div class="cta-card reveal">
+      <span class="tag" style="color:#60a5fa;position:relative">Get early access</span>
+      <h2 style="margin-top:12px">Your renewal, <span class="blue">handled.</span></h2>
+      <p>Join the waitlist today. Early access members get 30 days free and lock in their price forever.</p>
+      <div class="cta-form">
+        <input type="text" class="inp-dark" placeholder="First name" autocomplete="given-name" style="width:100%">
+        <input type="email" class="inp-dark" id="bottom-email" placeholder="Email address" autocomplete="email" style="width:100%">
+        <button class="btn-blue" onclick="signup('bottom')" style="width:100%;padding:15px;font-size:15px">
+          Join the waitlist &mdash; it's free &rarr;
+        </button>
+      </div>
+      <div class="success" id="bottom-success" style="background:rgba(37,99,235,0.15);border-color:rgba(59,130,246,0.3);color:#93c5fd">
+        &#10003; You're on the list! We'll email you as soon as we launch.
+      </div>
+      <p class="cta-sub-note">No credit card &middot; No commitment &middot; Just your spot in line</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <a href="#" class="foot-logo">MyVisa<span>.ai</span></a>
+    <ul class="foot-links">
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#">Privacy policy</a></li>
+      <li><a href="#">Terms of service</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <p class="foot-note">&copy; 2025 MyVisa.ai &middot; Not legal advice &middot; Not affiliated with USCIS</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
