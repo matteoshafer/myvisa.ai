@@ -88,9 +88,17 @@ async function submitToKlaviyo(email, source) {
           data: {
             type: 'subscription',
             attributes: {
-              list_id: KLAVIYO_LIST_ID,
-              email: email,
-              custom_source: source,
+              profile: {
+                data: {
+                  type: 'profile',
+                  attributes: { email: email },
+                },
+              },
+            },
+            relationships: {
+              list: {
+                data: { type: 'list', id: KLAVIYO_LIST_ID },
+              },
             },
           },
         }),
