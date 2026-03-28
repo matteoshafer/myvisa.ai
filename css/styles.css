@@ -641,9 +641,9 @@ footer {
 }
 @media (max-width: 768px) {
   /* Top bar — just show "Join the waitlist →" centered */
-  .top-bar { padding: 0 40px 0 16px; justify-content: center; }
-  .top-bar-pill { display: none; }
-  .top-bar-text { display: none; }
+  .top-bar { padding: 0 40px 0 16px !important; justify-content: center !important; }
+  .top-bar-pill { display: none !important; }
+  .top-bar-text { display: none !important; }
 
   /* Nav */
   nav { padding: 0 20px; }
