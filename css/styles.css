@@ -640,13 +640,13 @@ footer {
   .sec-head { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  /* Top bar — just show "Join the waitlist →" centered */
-  .top-bar { padding: 0 40px 0 16px !important; justify-content: center !important; }
-  .top-bar-pill { display: none !important; }
-  .top-bar-text { display: none !important; }
+  /* Top bar */
+  .top-bar { height: 44px !important; gap: 8px !important; padding: 0 44px 0 12px !important; }
+  .top-bar-pill { font-size: 10px !important; padding: 2px 8px !important; }
+  .top-bar-link { font-size: 12px !important; }
 
   /* Nav */
-  nav { padding: 0 20px; }
+  nav { padding: 0 20px !important; top: 44px !important; }
   .nav-links { display: none; }
 
   h1 { letter-spacing: -1.5px; }
