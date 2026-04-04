@@ -225,6 +225,24 @@ h1 .line2 { display: block; }
   animation: up .3s ease both;
 }
 
+/* ─── EAD CARD PREVIEW ─── */
+.ead-preview {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  margin-top: 36px; position: relative;
+  animation: up .5s .32s ease both;
+}
+.ead-img {
+  width: 260px; border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid var(--border);
+  transform: rotate(-1.5deg);
+  transition: transform .3s;
+}
+.ead-img:hover { transform: rotate(0deg) scale(1.02); }
+.ead-label {
+  font-size: 12px; color: var(--muted2); font-weight: 500;
+}
+
 /* ─── TRUST STRIP ─── */
 .trust-strip {
   display: flex; align-items: center;
